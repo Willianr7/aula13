@@ -10,27 +10,27 @@ public class Exercicio13 {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Insira sua altura: ");
-        
-		double alturaDoHomem = scan.nextDouble();
-		double pesoIdealDoHomem = (72.7 * alturaDoHomem) - 58;
+		double alturaInserida = scan.nextDouble();
 		
-		System.out.println("O peso ideal de acordo com o calculo e de: " + pesoIdealDoHomem);
+		System.out.println("Insira o seu sexo 'f' ou 'm': ");
+		char sexoInserido = scan.next().charAt(0);
 		
-		System.out.println("Insira a sua altura se for do sexo feminino: ");
+		double peso;
 		
-		double alturaDaMulher = scan.nextDouble();
-		double pesoIdealDaMulher = (62.1 * alturaDaMulher) - 44.7;
+		if (sexoInserido == 'm' || sexoInserido == 'M') {
+			peso = (72.7 * alturaInserida) - 58;
+			
+		} else {
+			peso = (62.1 * alturaInserida) - 44.7;
+		} 
 		
-		System.out.println("O peso ideal de acordo com o calculo e de: " + pesoIdealDaMulher);
 		
 		
-		System.out.println("Insira o seu peso: ");
 		
-		double pesoDaPessoa = scan.nextDouble();
 		
-		System.out.println("Parabens, voce esta dentro do peso se for homem! " + pesoIdealDoHomem);
-		System.out.println("Parabens, voce esta dentro do peso se for mulher! " + pesoIdealDaMulher);
-		System.out.println("Infelizmente, voce esta abaixo ou acima do peso! " + pesoDaPessoa);
+	
+		
+
 		
 		
 		

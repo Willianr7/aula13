@@ -5,16 +5,35 @@ import java.util.Scanner;
 public class Exercicio12 {
 
 	public static void main(String[] args) {
-		// Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, usando a formula:
 		
-		Scanner scan = new Scanner (System.in);
-		
-		System.out.println("Insira sua altura: ");
-		double alturaDaPessoa = scan.nextDouble();
-		
-		double pesoIdealDaPessoa = (72.7 * alturaDaPessoa) - 58;
-		
-		System.out.println("O peso ideal de acordo com o calculo e de: " + pesoIdealDaPessoa);
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Insira a sua altura: ");
+        double alturaInserida = scan.nextDouble();
+        
+        System.out.println("Insira o seu sexo 'f' ou 'm': ");
+        String sexoInserido = scan.next();
+
+        double pesoIdeal;
+
+        if (sexoInserido == "M" || sexoInserido == "m" || sexoInserido == "m " || sexoInserido == "M ") {
+            pesoIdeal = ((72.7 * alturaInserida) - 58);
+        } else {
+            pesoIdeal = ((62.1 * alturaInserida) - 44.7);
+        }
+
+        System.out.println("Digite o seu peso: ");
+        double pesoInserido = scan.nextDouble();
+
+        if (pesoInserido > pesoIdeal) {
+            System.out.println("Cuide-se! Você está acima do peso.");
+        }else if (pesoInserido == pesoIdeal) {
+            System.out.println("Parabens! Você está dentro do peso.");
+        }else if (pesoInserido < pesoIdeal) {
+            System.out.println("Cuide-se! Você está abaixo do peso.");
+        }
+        scan.close();
+
 		
 		
 
